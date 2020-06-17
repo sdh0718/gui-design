@@ -22,7 +22,7 @@
     .temp{color: #cd9fd2 #f9afca #cdbfe0 #fcc3d5 #fadbee #d4cdfb #a5cbef #f4ece2;}
 
 /* 헤더 로고 내비*/
-    .header{height: 200px; background:linear-gradient(#cdbfe0,white 40%);}
+    .header{height: 200px;width: 100%; background:linear-gradient(#cdbfe0,white 40%);}
     .logo{margin: 0 auto; padding: 48px 0; border-bottom: 4px solid #cd9fd2; box-sizing: border-box;}
     .logo img{height: 100%;display: block; margin: 0 auto;}
     .nav{height: 80px;}
@@ -57,11 +57,11 @@
     .main>.content>aside{width: 20%;}
     .main>.content>ul>li{padding: 10px 20px;}
     .main h2{font-size: 2.5em; padding: 5px 20px; margin: 15px 0; margin-right: 80px;}
-
+    .main h3{margin-top: 15px;}
     .news h2{background-color: #cdbfe0;}
 
     .shop{display: flex; flex-flow: row wrap; justify-content: space-around;}
-    .shop h2{width: 100%;background-color: #fcc3d5;}
+    .shop h2{width: 100%;background-color: #fcc3d5;height: 60px;}
     .shop>li{width: 40%; overflow: hidden;}
     .shop img{width: 100%;}
 
@@ -85,6 +85,9 @@
     .footer address{float: left; display: flex; flex-flow: column nowrap; padding:20px;}
     .footer address>p{color: #cd9fd2;}
 
+@media(max-width: 1300px){
+    .shop>li{width: 35%;}
+}
 
 @media(max-width: 1100px){
     .search ul>li:first-child{width: 15%;}
@@ -95,12 +98,20 @@
 }
 
 @media(max-width: 900px){
+    .search{width: 100%;}
     .search ul>li:first-child{width: 20%;}
     .search ul>li:nth-child(2){width: 60%;}
     .search ul>li:last-child{width: 10%;}
     .search ul>li:last-child img{padding: 12px 0 0 5px;}
     .main>.content{display: flex; flex-flow: column wrap; justify-content: space-between;}
     .main>.content>ul{width: 100%;}
+}
+
+@media(max-width: 500px){
+    .nav>ul>li{font-size: 30px;}
+    .shop{flex-flow: column nowrap;}
+    .shop>li{width: 80%; text-align: center;}
+    .shop img{width: 60%;}
 }
 
 
@@ -169,7 +180,7 @@
                     </li>
                 </ul>
                 <ul class="shop">
-                    <h2>쇼핑 Shopping</h2>
+                    <h2>쇼핑 Shop</h2>
                     <li>
                         <img src="images/img04.jpg" alt="쇼핑1">
                         <h3>오늘의 트렌드 - 꽃무늬 린넨 원피스</h3>
