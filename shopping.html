@@ -31,8 +31,8 @@
     .search ul{height: 80px; background-color:#cd9fd2;margin: 50px 0; display: flex; justify-content: space-around;
         border-radius: 15px 0;}
     .search ul>li{margin: 10px 0;}
-    .search ul>li:first-child{width: 10%;line-height: 55px; text-align: center; position: relative;}
-    .search ul>li:nth-child(2){width: 80%;}
+    .search ul>li:first-child{width: 15%;line-height: 55px; text-align: center; position: relative;}
+    .search ul>li:nth-child(2){width: 75%;}
     .search ul>li:last-child{width: 5%;}
     .search ul>li:first-child>input{background-color: #f9afca; cursor: pointer; border: 3px solid #fee; transition: 0.3s;
         color: #933; font-weight: bold;}
@@ -41,9 +41,7 @@
     .search ul>li>input{width: 100%; height: 100%; font-size: 30px; line-height: 55px; padding: 0 20px; box-sizing: border-box; 
     border-radius: 10px 0;}
     .search ul>li:last-child>img{width: 40px; cursor: pointer; padding: 10% 0 0 10%;}
-    .search ul>li:first-child i{position: absolute; font-size: 30px; color: #933; left: 50%; top: 25%; transform: translate(-50%);
-        transition: 0.3s;}
-    .search ul>li:first-child:hover i{color: #669;}
+
 
 /* 메인 */
     .main{background-color: white;}
@@ -81,6 +79,7 @@
 
 @media(max-width: 1100px){
     .search ul>li:first-child{width: 15%;}
+    .search ul>li:first-child>input{font-size: 25px;}
     .search ul>li:nth-child(2){width: 70%;}
     .search ul>li:last-child img{padding:0;padding-top: 10px;}
     .main>.content>ul{width: 50%;}
@@ -89,11 +88,18 @@
 
 @media(max-width: 900px){
     .search ul>li:first-child{width: 20%;}
-    .search ul>li:nth-child(2){width: 60%;}
-    .search ul>li:last-child{width: 10%;}
-    .search ul>li:last-child img{padding: 12px 0 0 5px;}
+    .search ul>li:first-child>input{font-size: 18px; padding:0;}
+    .search ul>li:nth-child(2){width: 70%;}
+    .search ul>li:last-child{display: none;}
+    .search ul>li:last-child img{padding: 12px 0 0 0;}
     .main>.content{display: flex; flex-flow: column wrap; justify-content: space-between;}
     .main>.content>ul{width: 100%;}
+}
+
+@media(max-width: 500px){
+    .shop{flex-flow: column nowrap;}
+    .shop>li{width: 80%; text-align: center;}
+    .shop img{width: 60%;}
 }
 
 
@@ -111,7 +117,7 @@
             <div class="content">
                 <ul>
                     <li>
-                        <input type="button" value="트렌드">
+                        <input type="button" value="TRAND">
                     </li>
                     <li>
                         <input type="text" id="search_txt" placeholder="최저가 검색" required autofocus>
