@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <title>UNI - 가장 편한 사이트, 유니</title>
+
+</head>
+
+<style>
+    /* 디폴트 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    *{border: none; margin: 0; padding: 0; color: #333;}
+    a{color: black; text-decoration: none;}
+    ul,ol,li{list-style: none;}
+    img{vertical-align: bottom;}
+    .section{box-sizing: border-box;}
+    .content{width: 90%;margin: 0 auto;}
+    .wrap{max-width: 1600px; margin: 0 auto;}
+    .temp{color: #cd9fd2 #f9afca #cdbfe0 #fcc3d5 #fadbee #d4cdfb #a5cbef #f4ece2;}
+
+/* 헤더 로고*/
+    .header{height: 200px; background:linear-gradient(#cdbfe0,white 40%);}
+    .logo{margin: 0 auto; padding: 48px 0; border-bottom: 4px solid #cd9fd2; box-sizing: border-box;}
+    .logo img{height: 100%;display: block; margin: 0 auto;}
+
+
+/* 메인 */
+    .main{background-color: white;}
+    .main>.content{display: flex; flex-flow: row nowrap; justify-content: space-around;}
+
+    .login{width: 90%; height: 100%;margin: 100px 0;}
+    .login>form{width: 100%; height: 100%; background-color:#cdbfe0;padding: 50px 20px; box-sizing: border-box;
+        border-radius: 10px; text-align: left;}
+    .login h3{font-size: 2.0em;margin-bottom: 15px;}
+    .login label:nth-of-type(2){margin-right: 31px;}
+    .login label,.login input{height: 25px; margin: 5px 0;}
+    .login input{border: 1px solid #969;}
+    .login input[type="text"],.login input[type="password"]{width: 60%;}
+    .login textarea{width: 90%; height: 500px; font-size: 20px;}
+    .login input[type="button"]{padding: 25px 50px; line-height: 2px; font-weight: bold; color: #969; background-color: #f4ece2;
+        font-size: 20px; transition: 0.3s; border-radius: 10px;}
+    .login input[type="button"]:hover{color: #666;}
+
+
+
+
+/* 푸터 */
+    .footer{height: 100px; background-color: white; border-top: 2px solid #cd9fd2; padding: 20px;}
+    .footer img{float: left;height: 80%;}
+    .footer address{float: left; display: flex; flex-flow: column nowrap; padding:20px;}
+    .footer address>p{color: #cd9fd2;}
+
+
+</style>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <img src="images/logo.png" alt="로고" >
+            </h1>
+        </header>
+
+
+        <section class="section main">
+            <div class="content">
+                <aside class="login">
+                    <form>
+                        <h3>메일 보내기</h3>
+                        <label for="id">메일주소</label>
+                        <input type="text" name="id" id="id" placeholder="메일 주소를 입력하세요 ex)aaa@uni.com" autofocus>
+                        <br>
+                        <label for="pw">제목</label>
+                        <input type="text" name="pw" id="pw" placeholder="제목 필수">
+                        <br>
+                        <br>
+                        <textarea></textarea>
+                        <br> <br>
+                        <input type="button" value="send to message">
+                    </form>
+                </aside>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <img src="images/logo.png" alt="푸터로고">
+            <address>
+                <p>대표이사 : SDH0718 | 주소 : 서울특별시 관악구 신림동 123-45번지 2층 210호</p>
+                <p>UNI. &#169;Copyright Allright reserved</p>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>

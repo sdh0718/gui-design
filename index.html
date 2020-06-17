@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 폰트어썸 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" integrity="sha256-46r060N2LrChLLb5zowXQ72/iKKNiw/lAmygmHExk/o=" crossorigin="anonymous" />
+    <title>UNI - 가장 편한 사이트, 유니</title>
+
+</head>
+
+<style>
+    /* 디폴트 */
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    *{border: none; margin: 0; padding: 0; color: #333;}
+    a{color: black; text-decoration: none;}
+    ul,ol,li{list-style: none;}
+    img{vertical-align: bottom;}
+    .section{box-sizing: border-box;}
+    .content{width: 90%;margin: 0 auto;}
+    .wrap{max-width: 1600px; margin: 0 auto;}
+    .temp{color: #cd9fd2 #f9afca #cdbfe0 #fcc3d5 #fadbee #d4cdfb #a5cbef #f4ece2;}
+
+/* 헤더 로고 내비*/
+    .header{height: 200px; background:linear-gradient(#cdbfe0,white 40%);}
+    .logo{margin: 0 auto; padding: 48px 0; border-bottom: 4px solid #cd9fd2; box-sizing: border-box;}
+    .logo img{height: 100%;display: block; margin: 0 auto;}
+    .nav{height: 80px;}
+    .nav>ul{display: flex; flex-flow: row nowrap; justify-content: space-around; padding: 10px 0;}
+    .nav>ul>li{font-size: 40px; font-weight: 900;}
+    .nav>ul>li>a{color: #cd9fd2;}
+    .nav>ul>li>a:hover{text-decoration: underline; color: #666;}
+
+
+/* 검색 */
+    .search{width: 90%; margin: 0 auto;}
+    .search ul{height: 80px; background-color:#cd9fd2;margin: 80px 0 50px; display: flex; justify-content: space-around;
+        border-radius: 15px 0;}
+    .search ul>li{margin: 10px 0;}
+    .search ul>li:first-child{width: 10%;line-height: 55px; text-align: center; position: relative;}
+    .search ul>li:nth-child(2){width: 80%;}
+    .search ul>li:last-child{width: 5%;}
+    .search ul>li:first-child>input{background-color: #f9afca; cursor: pointer; border: 3px solid #fee; transition: 0.3s;}
+    .search ul>li:first-child:hover>input{background-color: #a5cbef;border-color:#d4cdfb;}
+    .search ul>li:nth-child(2)>input{background-color: white; font-size: 24px;}
+    .search ul>li>input{width: 100%; height: 100%; font-size: 30px; line-height: 55px; padding: 0 20px; box-sizing: border-box; 
+    border-radius: 10px 0;}
+    .search ul>li:last-child>img{width: 40px; cursor: pointer; padding: 10% 0 0 10%;}
+    .search ul>li:first-child i{position: absolute; font-size: 30px; color: #933; left: 50%; top: 25%; transform: translate(-50%);
+        transition: 0.3s;}
+    .search ul>li:first-child:hover i{color: #669;}
+
+/* 메인 */
+    .main{background-color: white;}
+    .main>.content{display: flex; flex-flow: row nowrap; justify-content: space-around;}
+    .main>.content>ul{width: 35%; margin-bottom: 50px; box-sizing: content-box;}
+    .main>.content>aside{width: 20%;}
+    .main>.content>ul>li{padding: 10px 20px;}
+    .main h2{font-size: 2.5em; padding: 5px 20px; margin: 15px 0; margin-right: 80px;}
+
+    .news h2{background-color: #cdbfe0;}
+
+    .shop{display: flex; flex-flow: row wrap; justify-content: space-around;}
+    .shop h2{width: 100%;background-color: #fcc3d5;}
+    .shop>li{width: 40%; overflow: hidden;}
+    .shop img{width: 100%;}
+
+    .login{width: 100%;}
+    .login>form{width: 100%; height: 35%; background-color:#cdbfe0; margin-top: 100px; padding: 20px; box-sizing: border-box;
+        border-radius: 10px;}
+    .login h3{font-size: 2.0em;margin-bottom: 15px;}
+    .login label:nth-of-type(1){margin-right: 16px;}
+    .login label,.login input{height: 25px; margin: 5px 0;}
+    .login input{border: 1px solid #666;}
+    .login input[type="button"]{padding: 15px 21px; line-height: 2px; font-weight: bold; color: white; background-color: #a5cbef;
+        font-size: 20px; transition: 0.3s;}
+    .login input[type="button"]:hover{color: #666;}
+
+
+
+
+/* 푸터 */
+    .footer{height: 100px; background-color: white; border-top: 2px solid #cd9fd2; padding: 20px;}
+    .footer img{float: left;height: 80%;}
+    .footer address{float: left; display: flex; flex-flow: column nowrap; padding:20px;}
+    .footer address>p{color: #cd9fd2;}
+
+
+@media(max-width: 1100px){
+    .search ul>li:first-child{width: 15%;}
+    .search ul>li:nth-child(2){width: 70%;}
+    .search ul>li:last-child img{padding:0;padding-top: 10px;}
+    .main>.content>ul{width: 50%;}
+    .main>.content>aside{display: none;}
+}
+
+@media(max-width: 900px){
+    .search ul>li:first-child{width: 20%;}
+    .search ul>li:nth-child(2){width: 60%;}
+    .search ul>li:last-child{width: 10%;}
+    .search ul>li:last-child img{padding: 12px 0 0 5px;}
+    .main>.content{display: flex; flex-flow: column wrap; justify-content: space-between;}
+    .main>.content>ul{width: 100%;}
+}
+
+
+</style>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <h1 class="logo">
+                <img src="images/logo.png" alt="로고" >
+            </h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="shopping.html" target="_blank">쇼핑</a></li>
+                    <li><a href="news.html" target="_blank">뉴스</a></li>
+                    <li><a href="mail.html" target="_blank">메일</a></li>
+                    <li><a href="login.html" target="_blank">로그인</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section class="section search">
+            <div class="content">
+                <ul>
+                    <li>
+                        <input type="button">
+                        <i class="fas fa-search"></i>
+                    </li>
+                    <li>
+                        <input type="text" id="search_txt" placeholder="검색어를 입력하세요" required autofocus>
+                    </li>
+                    <li>
+                        <img src="images/search.png" alt="서치">
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="section main">
+            <div class="content">
+                <ul class="news">
+                    <h2>뉴스 News</h2>
+                    <li>
+                        <h3>오늘의 뉴스 - 유니, 사이트 개설...</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minus molestias neque perferendis earum. 
+                            Minima ad sapiente at cumque libero facilis laborum non quis dignissimos earum, 
+                            repellendus repudiandae optio reiciendis!</p>
+                    </li>
+                    <li>
+                        <h3>covid-19, 잦아들 기미 보이지 않아...</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minus molestias neque perferendis earum. 
+                            Minima ad sapiente at cumque libero facilis laborum non quis dignissimos earum, 
+                            repellendus repudiandae optio reiciendis!</p>
+                    </li>
+                    <li>
+                        <h3>전 세계에서 인권문제로 곤란 중...</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minus molestias neque perferendis earum. 
+                            Minima ad sapiente at cumque libero facilis laborum non quis dignissimos earum, 
+                            repellendus repudiandae optio reiciendis!</p>
+                    </li>
+                    <li>
+                        <h3>1천원으로 가난한 나라에 후원해보세요...</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor minus molestias neque perferendis earum. 
+                            Minima ad sapiente at cumque libero facilis laborum non quis dignissimos earum, 
+                            repellendus repudiandae optio reiciendis!</p>
+                    </li>
+                </ul>
+                <ul class="shop">
+                    <h2>쇼핑 Shopping</h2>
+                    <li>
+                        <img src="images/img04.jpg" alt="쇼핑1">
+                        <h3>오늘의 트렌드 - 꽃무늬 린넨 원피스</h3>
+                        
+                    </li>
+                    <li>
+                        <img src="images/img03.jpg" alt="쇼핑2">
+                        <h3>이 가격 실화야? 4900원 티셔츠 모음</h3>
+                        
+                    </li>
+                    <li>
+                        <img src="images/img02.jpg" alt="쇼핑3">
+                        <h3>다들 예쁘다고 난리야~ 라벤더 귀걸이</h3>
+                        
+                    </li>
+                    <li>
+                        <img src="images/img01.jpg" alt="쇼핑4">
+                        <h3>아침을 깨우는 간단한 끼니! 칼로리 바</h3>
+                        
+                    </li>
+                </ul>
+                <aside class="login">
+                    <form>
+                        <h3>로그인</h3>
+                        <label for="id">아이디</label>
+                        <input type="text" name="id" id="id" placeholder="아이디를 입력하세요" autofocus>
+                        <br>
+                        <label for="pw">패스워드</label>
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요">
+                        <br> <br>
+                        <input type="button" value="LOGIN">
+                        <input type="button" value="CANCEL">
+                    </form>
+                </aside>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <img src="images/logo.png" alt="푸터로고">
+            <address>
+                <p>대표이사 : SDH0718 | 주소 : 서울특별시 관악구 신림동 123-45번지 2층 210호</p>
+                <p>UNI. &#169;Copyright Allright reserved</p>
+            </address>
+        </footer>
+    </div>
+</body>
+</html>
